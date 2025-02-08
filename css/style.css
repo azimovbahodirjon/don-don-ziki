@@ -207,14 +207,6 @@ body {
   cursor: pointer;
 }
 
-.status-refresh:hover {
-  /* background-color: #dedede;
-  transform: scale(1.2);
-  transition: 0.3s ease; */
-}
-
-/* Rules */
-
 .rules-btn {
   position: fixed;
   bottom: 32px;
@@ -232,13 +224,6 @@ body {
   border-radius: 8px;
   transition: 0.3s;
 }
-
-/* .rules-btn:hover {
-  background-color: #ffffff;
-  color: #3b4262;
-  transform: scale(1.2);
-  transition: 2s;
-} */
 
 #rules-center {
   display: flex;
