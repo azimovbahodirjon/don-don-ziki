@@ -1,3 +1,5 @@
 export const initialState = {
-    mode: "ease",
-}
+  mode: "easy",
+};
+// easy - oson
+// hard - qiyin

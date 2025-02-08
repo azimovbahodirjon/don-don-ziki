@@ -3,175 +3,284 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: "Barlow Semi Condensed";
-    src: url("../fonts/BarlowSemiCondensed-Bold.woff2") format("woff2"), url("../fonts/BarlowSemiCondensed-Bold.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Barlow Semi Condensed";
+  src: url("../fonts/BarlowSemiCondensed-Bold.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Barlow Semi Condensed";
-    src: url("../fonts/BarlowSemiCondensed-SemiBold.woff2") format("woff2"), url("../fonts/BarlowSemiCondensed-SemiBold.woff") format("woff");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Barlow Semi Condensed";
+  src: url("../fonts/BarlowSemiCondensed-SemiBold.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    font-family: "Barlow Semi Condensed", "Arial", sans-serif;
-    background-image: radial-gradient(rgba(31, 55, 87, 1), rgba(19, 21, 55, 1));
+  font-family: "Barlow Semi Condensed", "Arial", sans-serif;
+  background-image: radial-gradient(rgba(31, 55, 87, 1), rgba(19, 21, 55, 1));
 }
 
 .win-shadow {
-    box-shadow: 0px 0px 0px 50px rgba(255, 255, 255, 0.05), 0px 0px 0px 100px rgba(255, 255, 255, 0.05), 0px 0px 0px 150px rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 0px 50px rgba(255, 255, 255, 0.05),
+    0px 0px 0px 100px rgba(255, 255, 255, 0.05),
+    0px 0px 0px 150px rgba(255, 255, 255, 0.05);
 }
 
 .shadow {
-    box-shadow: 0px 0px 0px 24px rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 0px 24px rgba(255, 255, 255, 0.05);
 }
-
 
 /* Header  */
 
 .header {
-    padding-top: 48px;
-    padding-bottom: 48px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
 .header__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 3px solid rgba(255, 255, 255, 0.29);
-    border-radius: 15px;
-    width: 100%;
-    max-width: 700px;
-    padding: 30px;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid rgba(255, 255, 255, 0.29);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 700px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header__score {
-    background-image: linear-gradient( rgba(243, 243, 243, 1), rgba(255, 255, 255, 1));
-    min-width: 150px;
-    border-radius: 8px;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(
+    rgba(243, 243, 243, 1),
+    rgba(255, 255, 255, 1)
+  );
+  min-width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
 .score__inner {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 16px;
 }
 
 .score__title {
-    text-transform: uppercase;
-    color: rgba(42, 69, 194, 1);
-    display: inline-block;
-    letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(42, 69, 194, 1);
+  display: inline-block;
+  letter-spacing: 2.5px;
 }
 
 .score__text {
-    font-size: 64px;
-    font-weight: 700;
-    color: rgba(86, 84, 104, 1);
+  font-size: 64px;
+  font-weight: 700;
+  color: rgba(86, 84, 104, 1);
 }
-
 
 /* Game zone */
 
-.game-zone {}
-
 .game-zone__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    place-items: center;
-    column-gap: 80px;
-    row-gap: 24px;
-    width: 100%;
-    max-width: 476px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url("../img/path.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.game-zone__button:nth-child(3) {
-    grid-column-start: 1;
-    grid-column-end: 3;
+  width: 100%;
+  max-width: 476px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  flex-wrap: wrap;
+  column-gap: 80px;
+  row-gap: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../img/path.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .game-zone__button {
-    place-self: center;
-    background-color: transparent;
-    border: none;
-    border-radius: 50%;
-    transition: box-shadow 0.3 ease;
-    cursor: pointer;
+  place-self: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.game-zone__button:nth-child(3) {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .game-zone__button:hover {
-    box-shadow: 0px 0px 0px 24px rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 0px 24px rgba(255, 255, 255, 0.05);
 }
 
 .game-zone__img {
-    width: 198px;
-    height: 203px;
-    pointer-events: none;
+  width: 198px;
+  height: 203px;
+  pointer-events: none;
 }
 
-
-/* Game picker */
+/* Game-zone-picker */
 
 .game-zone-picker {
-    width: 100%;
-    display: none;
+  width: 100%;
+  display: none;
 }
 
 .game-zone-picker__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 950px;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 950px;
+  margin: 0 auto;
+  gap: 30px;
 }
+
+.game-zone-picker__part-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 938px;
+}
+
+/* Bo‘limlar */
 
 .game-zone-picker__part {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.part {}
-
-.part__title {
-    margin-bottom: 63px;
+.part-title {
+  font-size: 24px;
+  color: white;
+  text-align: center;
 }
 
-.part__img {}
+.part-img {
+  width: 293px;
+  height: 300px;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+}
 
-.game-zone-picker__status {}
+.part-img:hover {
+  box-shadow: 0px 0px 0px 24px rgba(255, 255, 255, 0.05);
+}
 
-.status {}
+.game-zone-picker__status {
+  text-align: center;
+}
 
 .status__title {
-    margin-bottom: 16px;
+  font-size: 56px;
+  color: white;
+  margin-bottom: 10px;
 }
 
-.status__refresh {}
+.status-refresh {
+  padding: 15px 62px 14px 60px;
+  font-size: 16px;
+  background-color: white;
+  color: #3b4262;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.status-refresh:hover {
+  /* background-color: #dedede;
+  transform: scale(1.2);
+  transition: 0.3s ease; */
+}
+
+/* Rules */
+
+.rules-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background-color: transparent;
+  padding: 11px 36px 10px 37px;
+  font-family: "Barlow Semi" Condensed;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.2px;
+  letter-spacing: 2.5px;
+  color: #ffffff;
+  text-align: center;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* .rules-btn:hover {
+  background-color: #ffffff;
+  color: #3b4262;
+  transform: scale(1.2);
+  transition: 2s;
+} */
+
+#rules-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.rules-container {
+  background-color: #ffffff;
+  padding: 32px;
+  max-width: 400px;
+  box-shadow: 0px 3px 3px 0px #00000032;
+  border-radius: 8px;
+}
+
+.rules-df {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.rules-title {
+  font-family: "Barlow Semi" Condensed;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: left;
+  color: #3b4262;
+}
+
+.rules-x {
+  width: 19px;
+  height: 19px;
+  background-color: transparent;
+  border: none;
+  color: #3b4262;
+}
+
+.rules-img {
+  display: flex;
+  width: 305px;
+  height: 271px;
+}
